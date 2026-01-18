@@ -1,152 +1,152 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    background: #fff0f6; /* very light pastel pink */
-    color: #333;
+    background-color: #f6e3df;
+    font-family: 'Poppins', sans-serif;
+    color: #4a2c2a;
 }
 
-header {
-    background-color: #ffb6c1; /* pastel pink */
-    color: white;
-    text-align: center;
-    padding: 30px 10px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    letter-spacing: 2px;
-}
-
-nav {
-    background-color: #ffe4e1; /* lighter pink */
-    text-align: center;
-    padding: 15px 0;
-}
-
-nav a {
-    margin: 0 20px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    background-color: #ff69b4; /* bright pink on hover */
-    color: white;
-}
-
-section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
-    background-color: #fff; /* white section */
-    border-radius: 12px;
-    margin-top: 30px;
-}
-
-section h2 {
-    text-align: center;
-    color: #ff69b4;
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-footer {
-    background-color: #ffb6c1;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-    font-size: 0.9em;
-}
-
-button, .btn {
-    background-color: #ff69b4;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-button:hover, .btn:hover {
-    background-color: #ff1493;
-}
-
-/* ---------- PRODUCTS SECTION ---------- */
-.product-container {
+/* NAVBAR */
+.navbar {
+    background-color: #ffffff;
+    padding: 15px 40px;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.product-card {
-    background-color: #fff0f6;
-    border: 1px solid #ffb6c1;
-    border-radius: 12px;
-    padding: 15px;
-    margin: 15px;
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #b46a6a;
+}
+
+.nav-links a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #6d3c3c;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #b46a6a;
+}
+
+/* SECTIONS */
+.section {
+    padding: 70px 60px;
     text-align: center;
-    width: 250px;
-    transition: 0.3s;
+}
+
+/* HOME */
+#home {
+    background: linear-gradient(to right, #e9b7b7, #f6e3df);
+}
+
+#home h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+#home p {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+#home button {
+    padding: 12px 28px;
+    border-radius: 30px;
+    border: none;
+    background-color: #b46a6a;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#home button:hover {
+    background-color: #9c5555;
+}
+
+/* PRODUCTS */
+#products h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+/* PRODUCT CARD */
+.product-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
 }
 
 .product-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+    transform: translateY(-8px);
 }
 
 .product-card img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 15px;
 }
 
 .product-card h3 {
-    color: #ff69b4;
+    font-size: 16px;
     margin-bottom: 5px;
 }
 
 .product-card p {
-    color: #333;
-    font-weight: bold;
+    font-size: 14px;
     margin-bottom: 10px;
 }
 
 .product-card button {
-    background-color: #ff69b4;
-    color: white;
-    padding: 10px 20px;
+    background-color: #b46a6a;
     border: none;
-    border-radius: 8px;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
     cursor: pointer;
-    font-weight: bold;
+    font-size: 14px;
 }
 
 .product-card button:hover {
-    background-color: #ff1493;
+    background-color: #9c5555;
 }
 
-/* ---------- RESPONSIVE ---------- */
-@media screen and (max-width: 768px) {
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    section {
-        margin: 20px 10px;
-    }
-
-    .product-card {
-        width: 90%;
-    }
+/* ABOUT */
+#about {
+    background-color: #f2cfcf;
 }
+
+#about h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 10px auto;
+    font-size: 15px;
+    line-height: 1.6;
+}
+                             css file
