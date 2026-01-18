@@ -58,5 +58,9 @@ function showSection(sectionId) {
 // BUY NOW
 // =====================
 function buyNow() {
-  alert("✅ Order Successful!");
+    window.location.href = "order.html";
+}
+
+function goHome() {
+    window.location.href = "home.html";
 }
